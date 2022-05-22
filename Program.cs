@@ -10,21 +10,36 @@ namespace Arrays
         {
 
             OperacoesArray op = new OperacoesArray();
-            int[] array = new int[3] { 9, 1, 2 };
+            int[] array = new int[3] { 9, 1, 4 };
             int[] arrayCopia = new int[5];
+            
 
-            int valorProcurado = 2;
-            bool exist = op.Exist(array, valorProcurado);
-
-            if (exist)
+            //Maior que todos array
+            int valorProcurado = 0;
+            bool tdsMaiorQue = op.TdMaiorQue(array, valorProcurado);
+            if (tdsMaiorQue)
             {
-                Write($"ok {valorProcurado}");
+                Write($"Todos são maior que: {valorProcurado}");
             }
             else
             {
-                Write("nada encontrado");
+                WriteLine("nada");
             }
 
+            ////Procurando Array
+            //int valorProcurado = 2;
+            //bool exist = op.Exist(array, valorProcurado);
+
+            //if (exist)
+            //{
+            //    Write($"ok {valorProcurado}");
+            //}
+            //else
+            //{
+            //    Write("nada encontrado");
+            //}
+
+            ////Array Ordenados
             //Write("array original");
             //op.ImprimirArray(array);
 

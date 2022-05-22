@@ -55,6 +55,11 @@ namespace Arrays.Helper
             return Array.Exists(array, elemento => elemento == valor);
         }
 
+        //todos maior
+        public bool TdMaiorQue(int[] array, int valor)
+        {
+            return Array.TrueForAll(array, element => element > valor);
+        }
 
     }
 }
