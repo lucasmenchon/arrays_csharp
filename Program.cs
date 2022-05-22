@@ -11,17 +11,25 @@ namespace Arrays
 
             OperacoesArray op = new OperacoesArray();
             int[] array = new int[3] { 9, 1, 2 };
+            int[] arrayCopia = new int[5];
 
-            WriteLine("array original");
+            Write("array original");
             op.ImprimirArray(array);
 
-            op.OrdenarBubbleSort(ref array);
+            //op.OrdenarBubbleSort(ref array);
+            //op.Ordenar(ref array);
 
-            WriteLine("array ordenado");
+
+            Write("array ordenado");
             op.ImprimirArray(array);
 
+            Write("array antes copia");
+            op.ImprimirArray(arrayCopia);
 
-            WriteLine("");
+            Write("array pos copia");
+            op.Copiar(ref array, ref arrayCopia);
+            op.ImprimirArray(arrayCopia);
+            
             /*int[] arrayInteiros = new int[3];
             arrayInteiros[0] = 1;
             arrayInteiros[1] = 2;
