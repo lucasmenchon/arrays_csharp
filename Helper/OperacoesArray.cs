@@ -33,7 +33,6 @@ namespace Arrays.Helper
         public void ImprimirArray(int[] array)
         {
             // Write(array[i]);
-
             var linha = string.Join(", ", array);
             WriteLine(" " + linha);
         }
@@ -49,6 +48,13 @@ namespace Arrays.Helper
         {
             Array.Copy(array, arrayDest, array.Length);
         }
+
+        //busca
+        public bool Exist(int[] array, int valor)
+        {
+            return Array.Exists(array, elemento => elemento == valor);
+        }
+
 
     }
 }
