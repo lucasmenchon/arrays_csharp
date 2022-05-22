@@ -1,6 +1,7 @@
 ﻿using System;
 using static System.Console;
 using Arrays.Helper;
+using System.Collections.Generic;
 
 namespace Arrays
 {
@@ -9,21 +10,60 @@ namespace Arrays
         static void Main(string[] args)
         {
 
-            OperacoesArray op = new OperacoesArray();
-            int[] array = new int[3] { 3, 2, 1 };
-            int[] arrayCopia = new int[5];
-            int valorProcurado = 9;
+            //usando list
+            OperacoesList opList = new OperacoesList();
 
-            int indice = op.ObterIndic(array, valorProcurado);
 
-            if (indice > -1)
+
+            List<string> estados = new List<string>();
+            estados.Add("sp");
+            estados.Add("mg");
+            estados.Add("rs");
+
+            //estados.count (count seleciona o numero de "valores
+            WriteLine($"Quantidade elementos lista {estados.Count}");
+            //foreach para percorrer todos elementos
+            foreach (var item in estados)
             {
-                Write("o indice do elemento {0} e: {1}", valorProcurado, indice);
+                WriteLine(item);
             }
-            else
+            //list com for
+            for (int i = 0; i < estados.Count; i++)
             {
-                Write("nada");
+                System.Console.WriteLine($"indice {i}, valor: {estados[i]}");
             }
+
+            //removendo
+            opList.ImprimirListaString(estados);
+            WriteLine("removendo elemento x");
+            estados.Remove("mg");
+            opList.ImprimirListaString(estados);
+
+            //OperacoesArray op = new OperacoesArray();
+            //int[] array = new int[3] { 3, 2, 1 };
+            //int[] arrayCopia = new int[5];
+            ////int valorProcurado = 9;
+
+            ////convertendo array para string
+            //string[] arrayString = op.ConvertArrayString(array);
+
+
+            ////Redimensionando array
+            //Write($"Capacidade atual array: {array.Length}");
+            //op.RedArray(ref array, array.Length * 2);
+            //Write($"Capacidade atual array: {array.Length}");
+
+            ////obter indice
+            //int indice = op.ObterIndic(array, valorProcurado);
+
+            //if (indice > -1)
+            //{
+            //    Write("o indice do elemento {0} e: {1}", valorProcurado, indice);
+            //}
+            //else
+            //{
+            //    Write("nada");
+            //}
 
             ////encontrar valor
             //int obterValor = op.ObterValor(array, valorProcurado);

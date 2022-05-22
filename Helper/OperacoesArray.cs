@@ -73,5 +73,18 @@ namespace Arrays.Helper
             return Array.IndexOf(array, valor);
         }
 
+        //redimensionar array
+        public void RedArray(ref int[] array, int novoTamanho)
+        {
+            Array.Resize(ref array, novoTamanho);
+        }
+
+        //converter array para string
+        public string[] ConvertArrayString(int[] array)
+        {
+            return Array.ConvertAll(array, elemento => elemento.ToString());
+        }
+
+
     }
 }
