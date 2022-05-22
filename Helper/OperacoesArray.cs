@@ -61,5 +61,17 @@ namespace Arrays.Helper
             return Array.TrueForAll(array, element => element > valor);
         }
 
+        //Obter Valor
+        public int ObterValor(int[] array, int valor)
+        {
+            return Array.Find(array, elemento => elemento == valor);
+        }
+
+        //Encontrar Indice
+        public int ObterIndic(int[] array, int valor)
+        {
+            return Array.IndexOf(array, valor);
+        }
+
     }
 }

@@ -10,21 +10,43 @@ namespace Arrays
         {
 
             OperacoesArray op = new OperacoesArray();
-            int[] array = new int[3] { 9, 1, 4 };
+            int[] array = new int[3] { 3, 2, 1 };
             int[] arrayCopia = new int[5];
-            
+            int valorProcurado = 9;
 
-            //Maior que todos array
-            int valorProcurado = 0;
-            bool tdsMaiorQue = op.TdMaiorQue(array, valorProcurado);
-            if (tdsMaiorQue)
+            int indice = op.ObterIndic(array, valorProcurado);
+
+            if (indice > -1)
             {
-                Write($"Todos são maior que: {valorProcurado}");
+                Write("o indice do elemento {0} e: {1}", valorProcurado, indice);
             }
             else
             {
-                WriteLine("nada");
+                Write("nada");
             }
+
+            ////encontrar valor
+            //int obterValor = op.ObterValor(array, valorProcurado);
+
+            //if (obterValor > 0)
+            //{
+            //    Write("ok");
+            //}
+            //else
+            //{
+            //    Write("nada");
+            //}
+
+            ////Maior que todos array            
+            //bool tdsMaiorQue = op.TdMaiorQue(array, valorProcurado);
+            //if (tdsMaiorQue)
+            //{
+            //    Write($"Todos são maior que: {valorProcurado}");
+            //}
+            //else
+            //{
+            //    WriteLine("nada");
+            //}
 
             ////Procurando Array
             //int valorProcurado = 2;
