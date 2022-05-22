@@ -15,13 +15,16 @@ namespace Arrays
 
 
 
-            List<string> estados = new List<string>();
-            estados.Add("sp");
-            estados.Add("mg");
-            estados.Add("rs");
+            List<string> estados = new List<string> { "SP", "MG", "RS"};
+            //estados.Add("sp");
+            //estados.Add("mg");
+            //estados.Add("rs");
+
+            string[] estadosArray = new string[2] {"CE", "DF"};
 
             //estados.count (count seleciona o numero de "valores
             WriteLine($"Quantidade elementos lista {estados.Count}");
+
             //foreach para percorrer todos elementos
             foreach (var item in estados)
             {
@@ -38,6 +41,13 @@ namespace Arrays
             WriteLine("removendo elemento x");
             estados.Remove("mg");
             opList.ImprimirListaString(estados);
+
+            //adicionando
+            estados.AddRange(estadosArray);
+            opList.ImprimirListaString(estados);
+
+            //order indice lista
+            estados.Insert(1, "RS");
 
             //OperacoesArray op = new OperacoesArray();
             //int[] array = new int[3] { 3, 2, 1 };
