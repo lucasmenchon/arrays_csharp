@@ -52,7 +52,7 @@ namespace Arrays
             OperacoesArray op = new OperacoesArray();
             int[] array = new int[3] { 3, 2, 1 };
             int[] arrayCopia = new int[5];
-            //int valorProcurado = 9;
+            int valorProcurado = 9;
 
             //convertendo array para string
             string[] arrayString = op.ConvertArrayString(array);
@@ -64,6 +64,7 @@ namespace Arrays
             Write($"Capacidade atual array: {array.Length}");
 
             //obter indice
+            //int valorProcurado = 2;
             int indice = op.ObterIndic(array, valorProcurado);
 
             if (indice > -1)
@@ -99,7 +100,7 @@ namespace Arrays
             }
 
             //Procurando Array
-            int valorProcurado = 2;
+            //int valorProcurado = 2;
             bool exist = op.Exist(array, valorProcurado);
 
             if (exist)
